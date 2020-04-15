@@ -1,0 +1,4 @@
+var Thermostat = function () {
+
+};
+
