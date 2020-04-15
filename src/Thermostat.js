@@ -41,5 +41,13 @@ class Thermostat {
         return "medium-usage"
     }
   }
+
+  powerSavingStatus() {
+    if (this.powerSaving) {
+      return "On"
+    } else {
+      return "Off"
+    }
+  }
 };
 

@@ -1,23 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <script src="src/Thermostat.js"></script>
+  <script src="jquery.js"></script>
 
   <title>Thermostat</title>
 </head>
-<body>
 
-  <p id="temperature">Temperature is 20</p>
+<body>
+  <h1>Thermostat</h1>
+  <h2>Temperature: <span id="temperature"></span></h2>
 
   <button id="up">Up</button>
   <button id="down">Down</button>
   <button id="reset">Reset</button>
   <button id="toggle-power-saving">Power Saving Toggle</button>
-  <p id="power-saving">Power Saving is on</p>
-  <p id="energy-usage">Energy Usage is medium</p>
+  <h2>Power Saving: <span id="power-saving"></span></h2>
+  <h3>Energy Usage is <span id="energy-usage"></span></p>
+
+    <script>
+      var thermostat = new Thermostat();
+
+      $(function () {
+
+        $('#temperature').html(thermostat.temperature);
+        $('#power-saving').html(thermostat.powerSavingStatus());
+        $('#energy-usage').html(thermostat.energyUsage());
+
+        $("#up").click(function () {
+          thermostat.up();
+          updateTemp();
+        });
+
+        $("#down").click(function () {
+          thermostat.down();
+          updateTemp();
+        });
+
+        $("#reset").click(function () {
+          thermostat.reset();
+          updateTemp();
+        });
+
+        $("#toggle-power-saving").click(function () {
+          thermostat.togglePowerSaving();
+          $('#power-saving').html(thermostat.powerSavingStatus());
+        });
+
+        var updateTemp = () => {
+          $('#temperature').html(thermostat.temperature);
+          $('#energy-usage').html(thermostat.energyUsage());
+        }
+
+      });
+    </script>
 
 </body>
+
 </html>
