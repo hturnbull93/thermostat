@@ -5,8 +5,7 @@ $(function () {
 
   $('#temperature').html(thermostat.temperature);
   $('#power-saving').html(thermostat.powerSavingStatus());
-  $('#energy-usage').html(thermostat.energyUsage());
-  $('#temperature').attr('class', thermostat.energyUsage());
+  $('#temperature-wrapper').attr('class', thermostat.energyUsage());
 
 
   $("#up").click(function () {
@@ -37,8 +36,7 @@ $(function () {
 
   var updateTemp = () => {
     $('#temperature').html(thermostat.temperature);
-    $('#energy-usage').html(thermostat.energyUsage());
-    $('#temperature').attr('class', thermostat.energyUsage());
+    $('#temperature-wrapper').attr('class', thermostat.energyUsage());
   };
 
   var displayWeather = (city) => {

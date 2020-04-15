@@ -14,22 +14,25 @@
   <title>Thermostat</title>
 </head>
 
-<body>
+<body id="container">
   <h1>Thermostat</h1>
-  <h2>Temperature: <span id="temperature"></span></h2>
+  <div id="temperature-wrapper">
+    <h2 id="temperature"></h2>
+  </div>
 
-  <button id="up">Up</button>
-  <button id="down">Down</button>
-  <button id="reset">Reset</button>
-  <button id="toggle-power-saving">Power Saving Toggle</button>
-  <h2>Power Saving: <span id="power-saving"></span></h2>
-  <h3>Energy Usage is <span id="energy-usage"></span></p>
+  <div class="controls">
 
-    <form id="select-city">
-      <input id='current-city' type='text'>
-      <input type='submit' value = 'get weather report'>
-    </form>
-    <p id="weather-report"></p>
+    <button id="up">Up</button>
+    <button id="down">Down</button>
+    <button id="reset">Reset</button>
+    <button id="toggle-power-saving">Power Saving <span id="power-saving"></span></button>
+  </div>
+
+  <form id="select-city">
+    <input id='current-city' type='text'>
+    <input type='submit' value = 'get weather report'>
+  </form>
+  <p id="weather-report"></p>
 
 </body>
 
