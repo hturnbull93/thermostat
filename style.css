@@ -88,17 +88,6 @@ button:hover, button:focus {
   box-shadow: #ffa500 0 0 1em;
 }
 
-/* #select-city {
-  background-color: #000000;
-  border-radius: .5em;
-  border-color: #1aafe0;
-  border: solid 2px;
-  font-family: 'Press Start 2P';
-  font-size: 0.8em;
-  transition: ease-in-out 100ms;
-  box-shadow: #1aafe0 0 0 1em;
-} */
-
 #select-city {
   padding: 1em 0;
 }
