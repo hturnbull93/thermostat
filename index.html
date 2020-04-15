@@ -9,7 +9,7 @@
   <script src="jquery.js"></script>
   <script src="interface.js"></script>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P">
 
   <title>Thermostat</title>
 </head>
@@ -17,22 +17,24 @@
 <body id="container">
   <h1>Thermostat</h1>
   <div id="temperature-wrapper">
+    <div id="sun"></div>
     <h2 id="temperature"></h2>
   </div>
 
   <div class="controls">
 
-    <button id="up">Up</button>
-    <button id="down">Down</button>
+    <button id="up">+</button>
+    <button id="down">-</button>
     <button id="reset">Reset</button>
     <button id="toggle-power-saving">Power Saving <span id="power-saving"></span></button>
   </div>
 
+  <h2>World Weather</h2>
   <form id="select-city">
-    <input id='current-city' type='text'>
-    <input type='submit' value = 'get weather report'>
+    <input id='current-city' type='text' placeholder="Enter city">
+    <input id="weather-submit"type='submit' value='Go'>
   </form>
-  <p id="weather-report"></p>
+  <h3 id="weather-report">Awaiting results...</h3>
 
 </body>
 

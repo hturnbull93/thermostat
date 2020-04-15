@@ -1,17 +1,39 @@
+.low-usage #sun {
+  background: linear-gradient(#0800ff, #ffffff);
+}
+.medium-usage #sun {
+  background: linear-gradient(#FA0601, #ff00c8);
+}
+.high-usage #sun {
+  background: linear-gradient(#ffff00, #ff0000);
+}
+
 .low-usage {
-  background: linear-gradient(rgb(26, 175, 224), lightblue);
+  filter: drop-shadow(0 0 3px #766af8);
 }
 .medium-usage {
-  background: linear-gradient(red, orange);
+  filter: drop-shadow(0 0 3px #ffa500);
 }
 .high-usage {
-  background: linear-gradient(darkred, red);
+  filter: drop-shadow(0 0 3px #ffff00);
+
+}
+
+html {
+  font-size: calc(10px + 1vw);
 }
 
 #container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  background: url(/images/grid.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  height: 100vh;
+  width: 100vw;
 }
 
 .controls {
@@ -26,47 +48,124 @@
 }
 
 * {
-  border: 0;
+  margin: 0;
   padding: 0;
-  color: white;
+  color: #ffffff;
   font-weight: 100;
-  font-family: 'SFAlien';
+  font-size: 1em;
+  outline: none;
 }
 
-h1 {
+h1, h2 {
+  font-family: 'SFAlien';
+  font-weight: 100;
+  font-size: 2em;
+  margin: .5em 0;
+  text-shadow: 0 0 5px #000000;
+}
+
+button, h3 {
+  background-color: #000000;
+  padding: 1em;
+  margin: 1em;
+  border-radius: .5em;
+  border-color: #1aafe0;
+  border: solid 2px;
+  font-family: 'Press Start 2P';
+  font-size: 0.8em;
+  transition: ease-in-out 100ms;
+  box-shadow: #1aafe0 0 0 1em;
+}
+
+button:hover, button:focus {
+  border-color: #ffa500;
+  box-shadow: #ffa500 0 0 1em;
+}
+
+/* #select-city {
+  background-color: #000000;
+  border-radius: .5em;
+  border-color: #1aafe0;
+  border: solid 2px;
+  font-family: 'Press Start 2P';
+  font-size: 0.8em;
+  transition: ease-in-out 100ms;
+  box-shadow: #1aafe0 0 0 1em;
+} */
+
+#select-city {
+  padding: 1em 0;
+}
+
+#current-city {
+  border-radius: .5em 0 0 .5em;
+}
+
+#weather-submit {
+  border-radius: 0 .5em .5em 0;
+}
+
+input {
+  background-color: #000000;
+  border-color: #1aafe0;
+  border: solid 2px;
+  font-family: 'Press Start 2P';
+  font-size: 0.8em;
+  padding: 1em;
+  box-shadow: #1aafe0 0 0 1em;
+  transition: ease-in-out 100ms;
+  box-shadow: #1aafe0 0 0 1em;
+
+}
+
+input:hover, input:focus {
+  border-color: #ffa500;
+  box-shadow: #ffa500 0 0 1em;
+}
+
+#temperature {
+  font-family: 'SFAlien';
   font-weight: 100;
   font-size: 3em;
+  width: 30vw;
 }
 
-button, input {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 1em;
-  font-family: 'SFAlien';
-  margin: 1em;
-}
 
 #temperature-wrapper {
-  width: 3em;
-  height: 3em;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  font-size: 3em;
-  line-height: 0.5;
+  width: 30vw;
+  height: 30vw;
+  margin: 1em 0;
 }
 
+#temperature {
+  position: absolute;
+  margin: 15vw 0;
+  text-align: center;
+  line-height: 0;
+  font-size: 5em;
+  
+}
+
+#sun {
+  position: absolute;
+  width: 30vw;
+  height: 30vw;
+  border-radius: 50%;
+  transition: background 1s;
+  clip-path: polygon(
+    100% 99%, 0 99%, 0 89%, 100% 89%,
+    100% 88%, 0 88%, 0 80%, 100% 80%,
+    100% 78%, 0 78%, 0 72%, 100% 72%,
+    100% 68%, 0 68%, 0 64%, 100% 64%,
+    100% 58%, 0 58%, 0 56%, 100% 56%,
+    100% 48%, 0 48%, 0 47%, 100% 47%,
+    100% 0%, 0 0%, 0 100%, 100% 100%
+    );
+}
 
 @font-face {
   font-family: 'SFAlien';
   src:
     url('/fonts/SFAlienEncounters.ttf')
     format('truetype');
-}
-
-body {
-  background: url(/images/grid.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50%;
-  height: 100vh;
 }
