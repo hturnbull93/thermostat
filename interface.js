@@ -5,6 +5,8 @@ $(function () {
   $('#temperature').html(thermostat.temperature);
   $('#power-saving').html(thermostat.powerSavingStatus());
   $('#energy-usage').html(thermostat.energyUsage());
+  $('#temperature').attr('class', thermostat.energyUsage());
+
 
   $("#up").click(function () {
     thermostat.up();
@@ -29,6 +31,7 @@ $(function () {
   var updateTemp = () => {
     $('#temperature').html(thermostat.temperature);
     $('#energy-usage').html(thermostat.energyUsage());
+    $('#temperature').attr('class', thermostat.energyUsage());
   }
 
 });

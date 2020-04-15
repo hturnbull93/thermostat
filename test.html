@@ -1,28 +1,27 @@
 <!doctype html>
 <html>
-
 <head>
-  <meta charset="utf-8">
-  <title>Demo</title>
-  <script src="jquery.js"></script>
-
-  <style>
-    a {
-      font-size: 72px;
-    }
-
-  </style>
+    <meta charset="utf-8">
+    <title>Demo</title>
+    <script src="jquery.js"></script>
+    <style>
+      .test {
+          font-weight: bold;
+      }
+    </style>
 </head>
-
 <body>
-  <a href="http://jquery.com/">jQuery</a>
+
+  <p>Hello</p>
+  <p class="test">Hello</p>
+
 
   <script>
-    $("a").click(function (event) {
-      event.preventDefault();
-      $(this).hide("slow");
+    $( document ).ready(function() {
+      $( "p" ).click(function( event ) {
+        $( "p" ).addClass( "test" );
+      });
     });
   </script>
 </body>
-
 </html>
