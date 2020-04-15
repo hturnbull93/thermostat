@@ -1,6 +1,7 @@
 class Thermostat {
   constructor() {
     this.temperature = 20;
+    this.powerSaving = true;
   }
   up() {
     this.temperature++;
@@ -10,5 +11,6 @@ class Thermostat {
       this.temperature--;
     }
   };
+
 }
 
