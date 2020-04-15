@@ -7,3 +7,30 @@
 .high-usage {
   color: red;
 }
+
+* {
+  border: 0;
+  padding: 0;
+  color: white;
+}
+
+h1 {
+  font-family: 'SFAlien';
+  font-weight: 100;
+  font-size: 3em;
+}
+
+@font-face {
+  font-family: 'SFAlien';
+  src:
+    url('/fonts/SFAlienEncounters.ttf')
+    format('truetype');
+}
+
+body {
+  background: url(/images/grid.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  height: 100vh;
+}
