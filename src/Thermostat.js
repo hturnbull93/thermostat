@@ -7,7 +7,7 @@ class Thermostat {
     this.PS_ON_MAX_TEMP = 25;
     this.PS_OFF_MAX_TEMP = 32;
     this.LOW_USAGE_TEMP = 18;
-    this.HIGH_USAGE_TEMP = 24;
+    this.HIGH_USAGE_TEMP = 25;
   }
   up() {
     if(this.powerSaving && this.temperature < this.PS_ON_MAX_TEMP){
@@ -32,12 +32,13 @@ class Thermostat {
   };
 
   energyUsage() {
-    if(this.temperature < this.LOW_USAGE_TEMP){
-      return "low-usage"
-    } else if(this.temperature > this.HIGH_USAGE_TEMP) {
-      return "high-usage"
-    } else {
-      return "medium-usage"
+    switch (true) {
+      case this.temperature < this.LOW_USAGE_TEMP:
+        return "low-usage"
+      case this.temperature >= this.HIGH_USAGE_TEMP:
+        return "high-usage"
+      default:
+        return "medium-usage"
     }
   }
 };
