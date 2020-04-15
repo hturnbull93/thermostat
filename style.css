@@ -20,7 +20,7 @@
 }
 
 html {
-  font-size: calc(10px + 1vw);
+  font-size: calc(10px + 0.5vw);
 }
 
 #container {
@@ -59,7 +59,8 @@ html {
 h1, h2 {
   font-family: 'SFAlien';
   font-weight: 100;
-  font-size: 2em;
+  font-size: 2.5em;
+  text-align: center;
   margin: .5em 0;
   text-shadow: 0 0 5px #000000;
 }
@@ -124,32 +125,27 @@ input:hover, input:focus {
 }
 
 #temperature {
-  font-family: 'SFAlien';
-  font-weight: 100;
-  font-size: 3em;
-  width: 30vw;
+  font-size: 5em;
+  grid-area: center;
+  z-index: 10;
+  margin: auto;
 }
-
 
 #temperature-wrapper {
   width: 30vw;
   height: 30vw;
+  min-width: 200px;
+  min-height: 200px;
+  max-width: 300px;
+  max-height: 300px;
   margin: 1em 0;
-}
 
-#temperature {
-  position: absolute;
-  margin: 15vw 0;
-  text-align: center;
-  line-height: 0;
-  font-size: 5em;
-  
+  display: grid;
+  grid-template-areas: "center";
 }
 
 #sun {
-  position: absolute;
-  width: 30vw;
-  height: 30vw;
+  grid-area: center;
   border-radius: 50%;
   transition: background 1s;
   clip-path: polygon(
