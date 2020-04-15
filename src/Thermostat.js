@@ -1,4 +1,9 @@
-var Thermostat = function () {
-  this.temperature = 20;
-};
+class Thermostat {
+  constructor() {
+    this.temperature = 20;
+  }
+  up() {
+    this.temperature++;
+  };
+}
 
