@@ -2,7 +2,11 @@
 
 This is a cool Vapour-wave themed thermostat, which also allows you to search for the weather in any city.
 
-This project was created to practice JavaScript, test driven with Jasmine, front-end JQuery, and HTML/CSS.
+This project was created to practice:
+
+- JavaScript, test driven with Jasmine
+- JQuery for front end functionality and API AJAX requests.
+- Styling with HTML/CSS.
 
 ## Screen Preview
 
