@@ -8,11 +8,8 @@ This project was created to practice:
 - JQuery for front end functionality and AJAX API requests.
 - Styling with HTML/CSS.
 
+[Visit it here](vapourwave-thermostat.surge.sh)
+
 ## Screen Preview
 
 ![Thermostat Demo](/images/thermostat_demo.gif)
-
-## Instructions
-
-1. Clone this repo.
-2. Open index.html in your browser.
