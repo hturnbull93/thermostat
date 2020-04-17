@@ -2,7 +2,7 @@
   background: linear-gradient(#0800ff, #ffffff);
 }
 .medium-usage #sun {
-  background: linear-gradient(#FA0601, #ff00c8);
+  background: linear-gradient(#fa0601, #ff00c8);
 }
 .high-usage #sun {
   background: linear-gradient(#ffff00, #ff0000);
@@ -16,7 +16,6 @@
 }
 .high-usage {
   filter: drop-shadow(0 0 3px #ffff00);
-
 }
 
 html {
@@ -28,7 +27,8 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: url(/images/grid.png);
+  background-image: linear-gradient(black, #4B0978);
+  background-image: url(/images/grid-compressed.png), linear-gradient(black, #4B0978);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50%;
@@ -56,34 +56,33 @@ html {
   outline: none;
 }
 
-h1, h2 {
-  font-family: 'SFAlien';
+h1,
+h2 {
+  font-family: "SFAlien";
   font-weight: 100;
   font-size: 2.5em;
   text-align: center;
-  margin: .5em 0;
-  text-shadow:
-    1px 1px 5px #000000,
-    0px 1px 5px #000000,
-    1px 0px 5px #000000,
-    0px 0px 5px #000000
-  ;
+  margin: 0.5em 0;
+  text-shadow: 1px 1px 5px #000000, 0px 1px 5px #000000, 1px 0px 5px #000000,
+    0px 0px 5px #000000;
 }
 
-button, h3 {
+button,
+h3 {
   background-color: #000000;
   padding: 1em;
   margin: 1em;
-  border-radius: .5em;
+  border-radius: 0.5em;
   border-color: #1aafe0;
   border: solid 2px;
-  font-family: 'Press Start 2P';
+  font-family: "Press Start 2P";
   font-size: 0.8em;
   transition: ease-in-out 100ms;
   box-shadow: #1aafe0 0 0 1em;
 }
 
-button:hover, button:focus {
+button:hover,
+button:focus {
   border-color: #ffa500;
   box-shadow: #ffa500 0 0 1em;
 }
@@ -93,27 +92,27 @@ button:hover, button:focus {
 }
 
 #current-city {
-  border-radius: .5em 0 0 .5em;
+  border-radius: 0.5em 0 0 0.5em;
 }
 
 #weather-submit {
-  border-radius: 0 .5em .5em 0;
+  border-radius: 0 0.5em 0.5em 0;
 }
 
 input {
   background-color: #000000;
   border-color: #1aafe0;
   border: solid 2px;
-  font-family: 'Press Start 2P';
+  font-family: "Press Start 2P";
   font-size: 0.8em;
   padding: 1em;
   box-shadow: #1aafe0 0 0 1em;
   transition: ease-in-out 100ms;
   box-shadow: #1aafe0 0 0 1em;
-
 }
 
-input:hover, input:focus {
+input:hover,
+input:focus {
   border-color: #ffa500;
   box-shadow: #ffa500 0 0 1em;
 }
@@ -150,12 +149,45 @@ input:hover, input:focus {
     100% 58%, 0 58%, 0 56%, 100% 56%,
     100% 48%, 0 48%, 0 47%, 100% 47%,
     100% 0%, 0 0%, 0 100%, 100% 100%
-    );
+  );
 }
 
 @font-face {
-  font-family: 'SFAlien';
-  src:
-    url('/fonts/SFAlienEncounters.ttf')
-    format('truetype');
+  font-family: "SFAlien";
+  src: url("/fonts/SFAlienEncounters.ttf") format("truetype");
+}
+
+.glow {
+  -webkit-animation: glow 3s ease-in-out infinite alternate;
+  -moz-animation:    glow 3s ease-in-out infinite alternate;
+  -o-animation:      glow 3s ease-in-out infinite alternate;
+  animation:         glow 3s ease-in-out infinite alternate;
+}
+
+.breathe {
+  -webkit-animation: breathe 3s ease-in-out infinite alternate;
+  -moz-animation:    breathe 3s ease-in-out infinite alternate;
+  -o-animation:      breathe 3s ease-in-out infinite alternate;
+  animation:         breathe 3s ease-in-out infinite alternate;
+}
+
+
+@keyframes glow {
+  0% {
+    filter: brightness(1.2);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
+
+@keyframes breathe {
+  0% {
+    -webkit-transform: scale(1);
+    transform:         scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0.97);
+    transform:         scale(0.97);
+  }
 }
