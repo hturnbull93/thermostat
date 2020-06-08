@@ -8,7 +8,7 @@ This project was created to practice:
 - JQuery for front end functionality and AJAX API requests.
 - Styling with HTML/CSS.
 
-[Visit it here](vapourwave-thermostat.surge.sh)
+[Visit it here](http://vapourwave-thermostat.surge.sh)
 
 ## Screen Preview
 
